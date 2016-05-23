@@ -1,1 +1,4 @@
-N
+Need to create a scratch project.
+https://scratch.mit.edu
+
+Create an account and check out the different projects of CS50 and create the project.
