@@ -1,0 +1,37 @@
+Ceaser Cipher: Symmetric key algorithm
+
+Key shifting algorithm
+Alphabet is shifted by the key size, If the alphabet is needs to be shifted after Z, it again starts from A.
+
+For decrypting, we need to shift the characters by: 26 - key.
+
+Redirects and Pipes: ~/ sort < student.txt | uniq > final.txt
+
+RSA Algorithm: Asymmetric key algorithm
+Public key and Private key
+
+1. Two large prime numbers to generate the public and private key
+
+Generate keys:
+p and q
+e.g.: p=23, q=43
+n = 23*43 = 989
+m = (p-1)*(q-1)= 22*42 = 924
+e = 5
+de = 1(mod m) 	#How to generate d in RSA algorithm
+60 = 0(mod60)
+125 = 65 = 5(mod60)
+Extended Euclidean Algorithm
+5d = 1 (mod 924) = 
+
+Public Key: (e,n) = (5,989)
+Private Key: (d,n) = (185, 989)
+
+c = m^e(mod n)
+
+CS50:
+c1 = 67^5 (mod 989) = 658
+c2 = 83^5 (mod 989) = 15
+c3 = 53^5 (mod 989) = 799
+c4 = 48^5 (mod 989) = 975
+
