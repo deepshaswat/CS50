@@ -1,0 +1,25 @@
+Week 6
+
+VPNs:
+access.yale.edu
+vpn.harvard.edu
+
+HTTP
+200:OK
+301:
+302:
+404:File Not Found
+401:
+403:
+500:
+Content-type: 
+
+URL:
+GET: http://url/search?key=value&key=value
+POST: 
+
+HTML
+CSS
+
+
+

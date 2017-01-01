@@ -1,0 +1,80 @@
+File recovery:
+
+The file signature for the jpeg image is: 255 216 255
+It means all the jpeg images starts with these 3 bytes only.
+
+Bitmap
+
+malloc((strlen(s)+1)*sizeof(char))
+
+t[i] = s[i] is similar to the below code:
+*(t + i) = *(s + i)
+
+free(s) 	to free the memory allocated
+
+
+Week - 5
+
+
+BST
+Buffer overflow
+hash table
+trie
+
+File System
+FILE *
+fopen(), fclose(), fgetc(), fputc(), fread(), fwrite()
+fgets(), fputs(), fprintf(), fscanf(), fseek(), ftell(), feof(), ferror()
+
+FILE* ptr = fopen(<filename>, operation);
+
+char ch = fgetc(ptr);	#can be used with only with "r" operation
+
+#Below code the depiction of the Cat command
+char ch;
+while((ch == fgetc(ptr)) != EOF)	#EOF checks the end of the file
+printf("%c", ch);
+
+fputc(<character>, ptr);	#can be used with "w" and "a" operation only
+
+#Below code depects the cp command
+#copies the content of one file into the another
+char ch;
+while((ch == fgetc(ptr)) != EOF)
+fputc(ch, ptr2);
+
+fread(<buffer>, <size>, <qty>, <file pointer>);	#bulk operation of fgetc
+
+int arr[10];
+#reads 10 bits of data from the file
+fread(arr, sizeof(int), 10, ptr);
+
+double* arr2 = malloc(sizeof(double)*80);
+fread(arr2, sizeof(double), 80, ptr);
+
+#exactly same as fgetc()
+char c;
+fread(&c, sizeof(char), 1, ptr);
+
+fwrite(<buffer>, <size>, <qty>, <file pointer>);	#bulk of fputc
+#all the ways of fread can be used with fwrite
+
+fclose(ptr);
+
+Linked List:
+
+Singly-LinkedList
+
+
+
+Doubly-LinkedList
+
+Hash Table
+
+Trie
+
+
+
+
+
+
