@@ -5,16 +5,18 @@ access.yale.edu
 vpn.harvard.edu
 
 HTTP
-200:OK
-301:
-302:
-404:File Not Found
-401:
-403:
-500:
+200	OK	
+301	Moved	Permanently	
+302	Found
+304	Not	Modified	
+401	Unauthorized	
+403	Forbidden	
+404	Not	Found	
+500	Internal	Server	Error
 Content-type: 
 
 URL:
+Search query using GET
 GET: http://url/search?key=value&key=value
 POST: 
 

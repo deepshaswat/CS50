@@ -19,8 +19,7 @@ n = 23*43 = 989
 m = (p-1)*(q-1)= 22*42 = 924
 e = 5
 de = 1(mod m) 	#How to generate d in RSA algorithm
-60 = 0(mod60)
-125 = 65 = 5(mod60)
+
 Extended Euclidean Algorithm
 5d = 1 (mod 924) = 
 
@@ -34,4 +33,19 @@ c1 = 67^5 (mod 989) = 658
 c2 = 83^5 (mod 989) = 15
 c3 = 53^5 (mod 989) = 799
 c4 = 48^5 (mod 989) = 975
+
+Calculation of d using Extended Euclidean Algorithm
+
+ax+by = gcd(a,b)
+5x + 924y =1
+5x = 1-924y 
+5x = 1 (mod 924)
+
+x	y	d 		k
+1	0	5
+0	1	924		0
+1	0	5
+
+
+Vigenere Cipher:
 
