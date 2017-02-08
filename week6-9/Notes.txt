@@ -25,3 +25,8 @@ CSS
 
 
 
+MACHINE LEARNING:
+
+Libraries used by python for machine learning:
+numpy		#scientific computing
+matplot		#generating plots
