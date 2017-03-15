@@ -24,9 +24,30 @@ HTML
 CSS
 
 
-
-MACHINE LEARNING:
+Week 7: MACHINE LEARNING:
 
 Libraries used by python for machine learning:
 numpy		#scientific computing
 matplot		#generating plots
+Contains few basic algorithms to read digits.
+
+
+Week 8: Python
+
+Print the formatted string:
+print("hello, {}".format(i))
+
+Fir the pressission formatting:
+print("{:.55f}".format(1 / 10))
+
+Python does not call the main function by default.
+To do so need to use the following syntax as standard:
+
+if __name__ == "__main__";
+	main()
+
+When using print() statment in py, the cursur goes to the next line. To hold the cursur in the same line, the following syntax to be used:
+print("n is: ", end="")	
+
+
+
