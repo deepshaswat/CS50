@@ -32,10 +32,12 @@ matplot		#generating plots
 Contains few basic algorithms to read digits.
 
 
-Week 8: Python
+Week 8: Python (3.5)
 
 Print the formatted string:
 print("hello, {}".format(i))
+
+name = input("Your name?")	#This will print the statment from the quotes and read the input and store the value in the variable.
 
 Fir the pressission formatting:
 print("{:.55f}".format(1 / 10))
@@ -48,6 +50,174 @@ if __name__ == "__main__";
 
 When using print() statment in py, the cursur goes to the next line. To hold the cursur in the same line, the following syntax to be used:
 print("n is: ", end="")	
+
+
+Tuples: It is a comma separated list(s)
+x, y  = y, x	#to swap two nos.
+
+a, b, c, d = foo()	#When a function returns more than one value.
+
+Using Class in python, creating a module for the class
+Two files: struct0.py, student.py
+
+#struct0.py
+#csv and file related lines are for different quest.
+import cs50
+import csv
+from student import Student
+
+students = []
+
+for i in range(3):
+	name = input("name")
+	dorm = input("dorm")
+
+	students.append(Student(name, dorm))
+
+for student in students:
+	print("{} is in {}.".format(student.name, student.dorm))	
+
+file = open("student.csv", "w")	
+writer = csv.writer(file)
+for student in students:
+	#double paraenthisis because it is a tuple
+	writer.writerow((student.name, student.dorm))	
+file.close()	
+
+
+#student.py
+class Student:
+	def __init__(self, name, dorm):
+		self.name = name
+		self.dorm =dorm
+
+
+
+class Dictionary:
+	
+	def __init__(self):
+		self.words = set()
+
+	def check(self, word):
+		return word.lower() in self.words	
+
+	def load(self, dictionary):
+		file = open(dictionary, "r")
+		for line in file:
+			self.words.adds(line.rstrip("\n"))
+		file.close()
+		return True
+
+	def	size(self):
+		return len(self.words)
+
+While Loop
+While (i > 0):
+	exp()
+
+Input from console:
+
+from sys import argv
+
+count = len(argv[1:])	#this will give the no of arguments
+<> is the not equal smbol
+script, first, second = argv	
+
+
+
+
+---------------------------
+Web based Python:
+---------------------------
+
+MVC Model
+
+Model View Controller 
+
+Controller - all logic for all the operation
+View - Templates for HTML, CSS for viewing of the website
+Model - Data comes from and get stored, like csv file, DB Servers
+
+
+HTTP Server
+
+Webser url: https://ide50-deepshaswat.cs50.io/
+
+from http.server import BaseHTTPRequestHandler, HTTPServer
+
+# HTTPRequestHandler class
+# In parenthesis, the class is parent class and the new class extends from that class
+class HTTPServer_RequestHandler(BaseHTTPRequestHandler):
+
+	#Get
+	def do_GET(self):
+
+		# send response status code
+		# for this dummy implementation, the get is returning all the status code as success.
+		self.send_response(200)
+
+		# send headers
+		self.send_header("Content-type", "text/html")
+		self.end_headers()
+
+		# write message
+		self.wfile.write(bytes("hello, world", "utf8"))
+		return
+
+# configure server, the socket connection
+port = 8080
+# Listen on all possible network available for the IP address: 0.0.0.0
+server_address = ("0.0.0.0", port) 
+httpd = HTTPServer(server_address, HTTPServer_RequestHandler)
+
+# run server
+httpd.serve_forever()
+
+To run script: python server.py
+
+
+## Need to check why this is not working in CS50 IDE
+
+---------------------------
+Python Framework - FLASK
+---------------------------
+
+Ex:1
+
+# application.py
+
+from flask import Flask, redirect, render_template, request, session, url_for
+
+app = Flask(__name__)
+
+@app.route("/")
+def index():
+	return render_template("index.html")
+
+@app.route("/register", methods=["POST"])	
+def register():
+	if request.form["name"] == "" or request.form["dorm"] == "":
+		return render_template("failure.html")
+	return render_template("success.html")		
+
+To run script: flask run --host=0.0.0.0 --port 8080
+
+Templates: failure.html, success.html, layout.html, index.html
+
+Notes for the Template and Flask syntax
+
+
+---------------------------
+Python and SQL
+---------------------------
+
+
+
+
+
+
+
+
 
 
 
